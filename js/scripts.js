@@ -2,7 +2,7 @@ function whileFunction() {
     let count = 5;
     while (count <= 15) {
         console.log(count);
-        count += 1;
+        count++;
     }
 }
 
@@ -12,13 +12,35 @@ function factorialFunction() {
     for (let i = 1; i <= num; i++) {
         factorial *= i;
     }
-    const result = factorial.toLocaleString('fullwide', {useGrouping:false});
+    const result = factorial.toLocaleString('fullwide', {useGrouping: false});
+
     console.log(result);
 }
-function drawstars() {
-    var arr= ['*', '**', '***'];
-    for (let i = 0; i < arr.length; i++) {
-        console.log(arr[i])
+
+function drawStars() {
+    const minStar = 1;
+    const maxStar = 8;
+    const star = '*';
+    let result = '';
+
+    for (let i = minStar; i <= maxStar; i++) {
+        result += star.repeat(i) + "\n";
     }
 
+    console.log(result);
+}
+
+function checkUsedElements() {
+    const items = [1, 3, 5, 6, 8, 7, 9, 9, 5, 4, 4, 6, 8, 2];
+    const returnItems = [];
+    const usedItems = [];
+    items.forEach((item) => {
+        if (item % 2 === 0 && usedItems.indexOf(item) < 0) {
+            usedItems.push(item);
+            item = item * 10;
+        }
+        returnItems.push(item);
+    });
+
+    console.log(returnItems);
 }
