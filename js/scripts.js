@@ -8,9 +8,10 @@ function whileFunction() {
 
 function factorialFunction() {
     let num = 26;
-    let fact = 1;
-    for (let i = 1; i <= num; i++){
-        fact *= i;
+    let factorial = 1;
+    for (let i = 1; i <= num; i++) {
+        factorial *= i;
     }
-    console.log(fact.toLocaleString('fullwide', {useGrouping:false}));
+    const result = factorial.toLocaleString('fullwide', {useGrouping:false});
+    console.log(result);
 }
