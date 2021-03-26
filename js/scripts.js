@@ -15,3 +15,10 @@ function factorialFunction() {
     const result = factorial.toLocaleString('fullwide', {useGrouping:false});
     console.log(result);
 }
+function drawstars() {
+    var arr= ['*', '**', '***'];
+    for (let i = 0; i < arr.length; i++) {
+        console.log(arr[i])
+    }
+
+}
