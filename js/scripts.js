@@ -50,7 +50,6 @@ function removeSpacesFromArray() {
         .map(str => str.replace(/\s/g, ""));
 
     console.log(things);
-
 }
 
 function replaceElementInString() {
@@ -58,4 +57,10 @@ function replaceElementInString() {
         .replace(",",".");
     
     console.log(sentace);
+}
+
+function deleteLastCharacterFromString() {
+    var text = "Click on the link to go to the documentation.".slice(0,-1);
+
+    console.log(text);
 }
