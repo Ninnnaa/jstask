@@ -53,14 +53,25 @@ function removeSpacesFromArray() {
 }
 
 function replaceElementInString() {
-    var sentace = "Retourne l'entier supérieur du nombre value,"
+    var sentence = "Retourne l'entier supérieur du nombre value,"
         .replace(",",".");
     
-    console.log(sentace);
+    console.log(sentence);
 }
 
 function deleteLastCharacterFromString() {
     var text = "Click on the link to go to the documentation.".slice(0,-1);
 
     console.log(text);
+}
+
+function UppercaseWords() {
+    var text = "Wikipedia is a free online encyclopedia," +
+        " created and edited by volunteers around the world and hosted " +
+        "by the Wikimedia Foundation";
+    var newtext = '';
+       newtext = text.replace("Wikipedia","Wiki");
+
+       console.log(newtext);
+       console.log(newtext.toUpperCase());
 }
