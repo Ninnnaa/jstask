@@ -51,3 +51,10 @@ function removeSpacesFromArray() {
     console.log(things);
 
 }
+
+function replaceElementInString() {
+    var sentace = "Retourne l'entier supérieur du nombre value,"
+        .replace(",",".");
+    
+    console.log(sentace);
+}
