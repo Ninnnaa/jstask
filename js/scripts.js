@@ -44,3 +44,10 @@ function checkUsedElements() {
 
     console.log(returnItems);
 }
+
+function removeSpacesFromArray() {
+    const things = ["casa ","telefon ", "masina ","om", "trei ","space"]
+        .map(str => str.replace(/\s/g, ""));
+    console.log(things);
+
+}
