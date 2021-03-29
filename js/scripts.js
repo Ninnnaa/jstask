@@ -70,9 +70,10 @@ function UppercaseWords() {
         " created and edited by volunteers around the world and hosted " +
         "by the Wikimedia Foundation";
     let newText = '';
-       newtext = text.replace("Wikipedia","Wiki");
+       text = text.replace("Wikipedia","Wiki");
+       newText = text.toUpperCase();
 
-       console.log(newtext, "\n", newtext.toUpperCase());
+       console.log(text,"\n",newText);
 }
 
 function concatSameLengthArrays() {
@@ -94,4 +95,8 @@ function concatSameLengthArrays() {
     });
 
     console.log(result);
+}
+
+function letterCountInArray() {
+
 }
