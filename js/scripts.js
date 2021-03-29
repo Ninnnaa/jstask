@@ -52,7 +52,7 @@ function removeSpacesFromArray() {
     console.log(things);
 }
 
-function replaceElementInString() {
+function replaceMarkInString() {
     var sentence = "Retourne l'entier supérieur du nombre value,"
         .replace(",",".");
     
@@ -66,12 +66,32 @@ function deleteLastCharacterFromString() {
 }
 
 function UppercaseWords() {
-    var text = "Wikipedia is a free online encyclopedia," +
+    let text = "Wikipedia is a free online encyclopedia," +
         " created and edited by volunteers around the world and hosted " +
         "by the Wikimedia Foundation";
-    var newtext = '';
+    let newText = '';
        newtext = text.replace("Wikipedia","Wiki");
 
-       console.log(newtext);
-       console.log(newtext.toUpperCase());
+       console.log(newtext, "\n", newtext.toUpperCase());
+}
+
+function concatSameLengthArrays() {
+    const a = ['a','b','mm','s'];
+    const b = ['f','d','m','se','6','8'];
+    const c = ['n','r','c','p', 'p'];
+    const d = ['2','g', 'y', 'a', 'u','l'];
+    let allArrays = [a, b, c, d];
+    var result = [];
+
+    allArrays.forEach((item) => {
+      if (item.length) {
+          if(result[item.length]) {
+              result[item.length].push(item);
+          } else {
+              result[item.length] = [item];
+          }
+      }
+    });
+
+    console.log(result);
 }
