@@ -12,9 +12,8 @@ function factorialFunction() {
     for (let i = 1; i <= num; i++) {
         factorial *= i;
     }
-    const result = factorial.toLocaleString('fullwide', {useGrouping: false});
 
-    console.log(result);
+    console.log(factorial);
 }
 
 function drawStars() {
@@ -55,7 +54,7 @@ function removeSpacesFromArray() {
 function replaceMarkInString() {
     var sentence = "Retourne l'entier supérieur du nombre value,"
         .replace(",",".");
-    
+
     console.log(sentence);
 }
 
@@ -65,13 +64,13 @@ function deleteLastCharacterFromString() {
     console.log(text);
 }
 
-function UppercaseWords() {
+function uppercaseWords() {
     let text = "Wikipedia is a free online encyclopedia," +
         " created and edited by volunteers around the world and hosted " +
         "by the Wikimedia Foundation";
-    let newText = '';
+
        text = text.replace("Wikipedia","Wiki");
-       newText = text.toUpperCase();
+      let newText = text.toUpperCase();
 
        console.log(text,"\n",newText);
 }
@@ -97,6 +96,17 @@ function concatSameLengthArrays() {
     console.log(result);
 }
 
-function letterCountInArray() {
+function countsCharacters() {
+    let test = 'The forEach construct provides an easy way to iterate over ' +
+        'arrays. forEach works only on arrays and objects, and will issue an ' +
+        'error when you try to use it on a variable with a different data type or ' +
+        'an uninitialized variable';
+    let result = '';
+
+    result = test.split(' ').map(word => (word + '(' +word.length +')')).join(' ');
+
+    console.log(result);
+
+
 
 }
