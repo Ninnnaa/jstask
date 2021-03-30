@@ -69,10 +69,10 @@ function uppercaseWords() {
         " created and edited by volunteers around the world and hosted " +
         "by the Wikimedia Foundation";
 
-       text = text.replace("Wikipedia","Wiki");
-      let newText = text.toUpperCase();
+    let newText = text.toUpperCase();
+    text = text.replace("Wikipedia", "Wiki");
 
-       console.log(text,"\n",newText);
+       console.log(text,"\n" + newText);
 }
 
 function concatSameLengthArrays() {
@@ -96,17 +96,38 @@ function concatSameLengthArrays() {
     console.log(result);
 }
 
-function countsCharacters() {
-    let test = 'The forEach construct provides an easy way to iterate over ' +
+function countWords() {
+    let text = 'The forEach construct provides an easy way to iterate over ' +
         'arrays. forEach works only on arrays and objects, and will issue an ' +
         'error when you try to use it on a variable with a different data type or ' +
         'an uninitialized variable';
-    let result = '';
-
-    result = test.split(' ').map(word => (word + '(' +word.length +')')).join(' ');
+    let result = text.split(' ').map(word => (word + '(' +word.length + ')')).join(' ');
 
     console.log(result);
+}
 
+function phoneNumbers() {
+    const numbers = ['+37378959721', '+37368223345', '+37323750222', '+37367525596', '+37369958474'];
+    const countryCodeCount = 4;
+    const mobileCodeCount = 2;
+    const homeCodeCount = 3;
+    const orange = ['68', '69', '60'];
+    const moldcell = ['79', '78'];
+    const moldtelecom = ['237'];
+    const unite = ['67'];
+    let result = '';
 
+    numbers.forEach((number) => {
+        if (orange.includes(number.slice(countryCodeCount, countryCodeCount + mobileCodeCount))) {
+            result += number + ' operator: ' + 'Orange\n';
+        } else if(moldcell.includes(number.slice(countryCodeCount, countryCodeCount + mobileCodeCount))) {
+            result += number + ' operator: ' + 'moldcell\n';
+        } else if(unite.includes(number.slice(countryCodeCount, countryCodeCount + mobileCodeCount))) {
+            result += number + ' operator: ' + 'unite\n';
+        } else if(moldtelecom.includes(number.slice(countryCodeCount, countryCodeCount + homeCodeCount))) {
+            result += number + ' operator: ' + 'moldtelecom\n';
+        }
+    });
 
+    console.log(result);
 }
