@@ -131,3 +131,14 @@ function phoneNumbers() {
 
     console.log(result);
 }
+
+function test() {
+    let a = 2;
+    this.test2(['2', '3', '4'],1);
+
+}
+
+function test2(y, z) {
+    console.log(y, z);
+
+}
