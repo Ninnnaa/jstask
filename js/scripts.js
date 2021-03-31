@@ -130,6 +130,7 @@ function phoneNumbers() {
     });
 
     console.log(result);
+
 }
 
 function test() {
@@ -140,5 +141,4 @@ function test() {
 
 function test2(y, z) {
     console.log(y, z);
-
 }
