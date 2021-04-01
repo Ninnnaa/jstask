@@ -84,3 +84,52 @@ function displayArraysByColorsIfElseVersion() {
 
     console.log(allFruits);
 }
+function orderProductsByColors() {
+    const fruits = [
+        {name: "banana", color: "yellow"},
+        {name: "apple", color: "red"},
+        {name: "kiwi", color: "green"},
+        {name: "raspberry", color: "red"},
+        {name: "pepper", color: "red"},
+    ];
+    const allFruits = [];
+    const red = 'red';
+    const yellow = 'yellow';
+    const green = 'green';
+
+    fruits.forEach((fruit) => {
+        const color = fruit.color;
+
+        switch (color) {
+            case red:
+                if(allFruits[0]) {
+                    allFruits[0].push(fruit.name);
+                } else {
+                    allFruits[0]=[fruit.name];
+                }
+                break;
+            case yellow:
+                if(allFruits[1]) {
+                    allFruits[1].push(fruit.name);
+                } else {
+                    allFruits[1]=[fruit.name];
+                }
+                break;
+            case green:
+                if(allFruits[2]) {
+                    allFruits[2].push(fruit.name);
+                } else {
+                    allFruits[2]=[fruit.name];
+                }
+                break;
+            default:
+                console.log("This color does not exist in our system");
+        }
+    });
+
+    console.log("The " +red +" products are: " +allFruits[0]);
+    console.log("The " +yellow +" products are: " +allFruits[1]);
+    console.log("The " +green +" products are: " +allFruits[2]);
+
+}
+
