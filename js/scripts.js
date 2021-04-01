@@ -141,4 +141,5 @@ function test() {
 
 function test2(y, z) {
     console.log(y, z);
+
 }
