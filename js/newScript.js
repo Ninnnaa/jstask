@@ -296,21 +296,6 @@ function sixth() {
     return result
 }
 
-function resolveAfter2Seconds() {
-    return new Promise(resolve => {
-        setTimeout(() => {
-            resolve('resolved');
-        }, 2000);
-    });
-}
-
-async function asyncFunction() {
-    console.log('calling');
-    const result = await resolveAfter2Seconds();
-    console.log(result);
-
-}
-
 function displayTheJson() {
     const obj = { name: "John", age: 30, city: "New York" };
     const myJSON = JSON.stringify(obj);
