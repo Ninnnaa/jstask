@@ -212,3 +212,66 @@ function newDataOrdinal(ordinalData){
     }
 }
 
+function first() {
+    const name = 'First function';
+    const firstArray = ['January', 'February'];
+
+    console.log(name, firstArray)
+
+    return firstArray
+}
+
+function second() {
+    const name = 'Second function';
+    const secondArray = ['March', 'April'];
+    const firstResult = first();
+    let result = firstResult.concat(secondArray);
+
+    console.log(name, result);
+
+    return result
+}
+
+function third() {
+    const name = 'Third function';
+    const thirdArray = ['May', 'June'];
+    const secondResult = second();
+    let result = secondResult.concat(thirdArray)
+
+    console.log(name, result);
+
+    return result
+}
+
+function fourth() {
+    const name = 'Fourth function';
+    const fourthArray = ['July', 'August'];
+    const thirdResult = third();
+    let result = thirdResult.concat(fourthArray)
+
+    console.log(name, result);
+
+    return result
+}
+
+function fifth() {
+    const name = 'Fourth function';
+    const fifthArray = ['September', 'October'];
+    const fourthResult = fourth();
+    let result = fourthResult.concat(fifthArray)
+
+    console.log(name, result);
+
+    return result
+}
+
+function sixth() {
+    const name = 'Fourth function';
+    const sixthArray = ['November', 'December'];
+    const fifthResult = fifth();
+    let result = fifthResult.concat(sixthArray)
+
+    console.log(name, result);
+
+    return result
+}
