@@ -225,7 +225,7 @@ function second() {
     const name = 'Second function';
     const secondArray = ['March', 'April'];
     const firstResult = first();
-    let result = firstResult.concat(secondArray);
+    const result = firstResult.concat(secondArray);
 
     console.log(name, result);
 
@@ -236,7 +236,7 @@ function third() {
     const name = 'Third function';
     const thirdArray = ['May', 'June'];
     const secondResult = second();
-    let result = secondResult.concat(thirdArray)
+    const result = secondResult.concat(thirdArray)
 
     console.log(name, result);
 
@@ -247,7 +247,7 @@ function fourth() {
     const name = 'Fourth function';
     const fourthArray = ['July', 'August'];
     const thirdResult = third();
-    let result = thirdResult.concat(fourthArray)
+    const result = thirdResult.concat(fourthArray)
 
     console.log(name, result);
 
@@ -258,7 +258,7 @@ function fifth() {
     const name = 'Fourth function';
     const fifthArray = ['September', 'October'];
     const fourthResult = fourth();
-    let result = fourthResult.concat(fifthArray)
+    const result = fourthResult.concat(fifthArray)
 
     console.log(name, result);
 
@@ -269,7 +269,7 @@ function sixth() {
     const name = 'Fourth function';
     const sixthArray = ['November', 'December'];
     const fifthResult = fifth();
-    let result = fifthResult.concat(sixthArray)
+    const result = fifthResult.concat(sixthArray)
 
     console.log(name, result);
 
