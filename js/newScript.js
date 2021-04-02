@@ -212,6 +212,26 @@ function newDataOrdinal(ordinalData){
     }
 }
 
+function ordinateObjectsByCharactersNumbers(){
+    const mounts = {
+        0: 'January', 1: 'February', 2: 'March', 3: 'April', 4: 'May',
+        5: 'June', 6: 'July', 7: 'August', 8: 'September', 9: 'October', 10:
+            'November', 11: 'December'
+    };
+    let mountsArray = [];
+    let result = [];
+
+    Object.values(mounts).forEach((value) => {
+        mountsArray.push({name: value, length: value.length});
+        result.push(value);
+
+    });
+
+    result.sort((a, b) => (a.length > b.length) ? 1 : -1);
+    result = Object.assign({}, result);
+
+    console.log(result);
+}
 function first() {
     const name = 'First function';
     const firstArray = ['January', 'February'];
