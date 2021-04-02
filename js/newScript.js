@@ -296,12 +296,17 @@ function sixth() {
     return result
 }
 
-function displayTheJson() {
-    const obj = { name: "John", age: 30, city: "New York" };
-    const myJSON = JSON.stringify(obj);
+function resolveAfter2Seconds() {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve('resolved');
+        }, 2000);
+    });
+}
 
-    console.log(myJSON);
-    document.getElementById("demo").innerHTML = myJSON;
-
+async function asyncFunction() {
+    console.log('calling');
+    const result = await resolveAfter2Seconds();
+    console.log(result);
 
 }
