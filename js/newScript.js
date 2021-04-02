@@ -212,23 +212,66 @@ function newDataOrdinal(ordinalData){
     }
 }
 
-function ordinateObjectsByCharactersNumbers(){
-    const mounts = {
-        0: 'January', 1: 'February', 2: 'March', 3: 'April', 4: 'May',
-        5: 'June', 6: 'July', 7: 'August', 8: 'September', 9: 'October', 10:
-            'November', 11: 'December'
-    };
-    let mountsArray = [];
-    let result = [];
+function first() {
+    const name = 'First function';
+    const firstArray = ['January', 'February'];
 
-    Object.values(mounts).forEach((value) => {
-        mountsArray.push({name: value, length: value.length});
-        result.push(value);
+    console.log(name, firstArray)
 
-    });
+    return firstArray
+}
 
-    result.sort((a, b) => (a.length > b.length) ? 1 : -1);
-    result = Object.assign({}, result);
+function second() {
+    const name = 'Second function';
+    const secondArray = ['March', 'April'];
+    const firstResult = first();
+    const result = firstResult.concat(secondArray);
 
-    console.log(result);
+    console.log(name, result);
+
+    return result
+}
+
+function third() {
+    const name = 'Third function';
+    const thirdArray = ['May', 'June'];
+    const secondResult = second();
+    const result = secondResult.concat(thirdArray)
+
+    console.log(name, result);
+
+    return result
+}
+
+function fourth() {
+    const name = 'Fourth function';
+    const fourthArray = ['July', 'August'];
+    const thirdResult = third();
+    const result = thirdResult.concat(fourthArray)
+
+    console.log(name, result);
+
+    return result
+}
+
+function fifth() {
+    const name = 'Fourth function';
+    const fifthArray = ['September', 'October'];
+    const fourthResult = fourth();
+    const result = fourthResult.concat(fifthArray)
+
+    console.log(name, result);
+
+    return result
+}
+
+function sixth() {
+    const name = 'Fourth function';
+    const sixthArray = ['November', 'December'];
+    const fifthResult = fifth();
+    const result = fifthResult.concat(sixthArray)
+
+    console.log(name, result);
+
+    return result
 }
