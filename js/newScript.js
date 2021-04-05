@@ -310,3 +310,9 @@ async function asyncFunction() {
     console.log(result);
 
 }
+
+function displayDataType() {
+    console.log(typeof 96);
+    console.log(typeof "This is");
+
+}
