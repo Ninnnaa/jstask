@@ -357,8 +357,9 @@ window.onload = () => {
     console.log('after');
 }
 
-function displayDataType() {
-    console.log(typeof 96);
-    console.log(typeof "This is");
+function convertStringToObject() {
+    let obj = '{"name":"John", "age":30, "city":"New York"}';
+    const result = JSON.parse(obj);
 
+    console.log("Name: "+result.name+"\nAge: " +result.age+ "\nCity: " +result.city);
 }
