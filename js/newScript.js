@@ -308,5 +308,12 @@ async function asyncFunction() {
     console.log('calling');
     const result = await resolveAfter2Seconds();
     console.log(result);
+}
 
+function displayTheJson() {
+    const obj = { name: "John", age: 30, city: "New York" };
+    const myJSON = JSON.stringify(obj);
+
+    console.log(myJSON);
+    document.getElementById("demo").innerHTML = myJSON;
 }
