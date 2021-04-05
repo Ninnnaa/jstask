@@ -16,24 +16,24 @@ function displayArraysByColorsSwitchVersion() {
 
         switch (color) {
             case red:
-                if(allFruits[0]) {
+                if (allFruits[0]) {
                     allFruits[0].push(fruit);
                 } else {
-                    allFruits[0]=[fruit];
+                    allFruits[0] = [fruit];
                 }
                 break;
             case yellow:
-                if(allFruits[1]) {
+                if (allFruits[1]) {
                     allFruits[1].push(fruit);
                 } else {
-                    allFruits[1]=[fruit];
+                    allFruits[1] = [fruit];
                 }
                 break;
             case green:
-                if(allFruits[2]) {
+                if (allFruits[2]) {
                     allFruits[2].push(fruit);
                 } else {
-                    allFruits[2]=[fruit];
+                    allFruits[2] = [fruit];
                 }
                 break;
             default:
@@ -62,27 +62,27 @@ function displayArraysByColorsIfElseVersion() {
 
     fruits.forEach(
         (fruit) => {
-        const color = fruit.color;
-        if (color === red) {
-            if(allFruits[0]) {
-                allFruits[0].push(fruit);
-            } else {
-                allFruits[0]=[fruit];
+            const color = fruit.color;
+            if (color === red) {
+                if (allFruits[0]) {
+                    allFruits[0].push(fruit);
+                } else {
+                    allFruits[0] = [fruit];
+                }
+            } else if (color === yellow) {
+                if (allFruits[1]) {
+                    allFruits[1].push(fruit);
+                } else {
+                    allFruits[1] = [fruit];
+                }
+            } else if (color === green) {
+                if (allFruits[2]) {
+                    allFruits[2].push(fruit);
+                } else {
+                    allFruits[2] = [fruit];
+                }
             }
-        } else if(color === yellow) {
-            if(allFruits[1]) {
-                allFruits[1].push(fruit);
-            } else {
-                allFruits[1]=[fruit];
-            }
-        } else if (color === green) {
-            if(allFruits[2]) {
-                allFruits[2].push(fruit);
-            } else {
-                allFruits[2]=[fruit];
-            }
-        }
-    });
+        });
 
     console.log(allFruits);
 }
@@ -105,24 +105,24 @@ function orderProductsByColors() {
 
         switch (color) {
             case red:
-                if(allFruits[0]) {
+                if (allFruits[0]) {
                     allFruits[0].push(fruit.name);
                 } else {
-                    allFruits[0]=[fruit.name];
+                    allFruits[0] = [fruit.name];
                 }
                 break;
             case yellow:
-                if(allFruits[1]) {
+                if (allFruits[1]) {
                     allFruits[1].push(fruit.name);
                 } else {
-                    allFruits[1]=[fruit.name];
+                    allFruits[1] = [fruit.name];
                 }
                 break;
             case green:
-                if(allFruits[2]) {
+                if (allFruits[2]) {
                     allFruits[2].push(fruit.name);
                 } else {
-                    allFruits[2]=[fruit.name];
+                    allFruits[2] = [fruit.name];
                 }
                 break;
             default:
@@ -130,9 +130,9 @@ function orderProductsByColors() {
         }
     });
 
-    console.log("The " +red +" products are: " + allFruits[0] +"\n"+
-        "The " +yellow +" products are: " + allFruits[1]+"\n"+
-        "The " +green +" products are: " + allFruits[2]);
+    console.log("The " + red + " products are: " + allFruits[0] + "\n" +
+        "The " + yellow + " products are: " + allFruits[1] + "\n" +
+        "The " + green + " products are: " + allFruits[2]);
 }
 
 function orderProductsByColorsSecond() {
@@ -141,7 +141,7 @@ function orderProductsByColorsSecond() {
 
     allFruits.forEach((fruitArray) => {
         const color = fruitArray[0].color;
-        result += "The " + color +" products are: "
+        result += "The " + color + " products are: "
         fruitArray.forEach((fruit) => {
             result += fruit.name + ", ";
         })
@@ -150,6 +150,7 @@ function orderProductsByColorsSecond() {
 
     console.log(result);
 }
+
 function displayTheTime() {
     const today = new Date();
     const date = getDateFormat('dd.mm.yy');
@@ -159,7 +160,7 @@ function displayTheTime() {
     const date4 = getDateFormat('fullDate');
 
 
-    console.log(date + "\n" + date1 + "\n" + date2 + "\n" + date3+ "\n"+date4);
+    console.log(date + "\n" + date1 + "\n" + date2 + "\n" + date3 + "\n" + date4);
 }
 
 function getDateFormat(format) {
@@ -170,14 +171,15 @@ function getDateFormat(format) {
                 '.' + today.getFullYear().toString().substr(-2);
             break;
         case 'dd,mm,yyyy':
-           return fixDateFormat(today.getMonth() + 1) + ',' + today.getDate() + ',' + today.getFullYear();
-           break;
+            return fixDateFormat(today.getMonth() + 1) + ',' + today.getDate() + ',' + today.getFullYear();
+            break;
         case 'yyyy.mm':
             return today.getFullYear() + '' + (today.getMonth() + 1);
         case 'ordinaryDate':
-            return "It's the " +newDataOrdinal(today.getDate())+" day";
+            return "It's the " + newDataOrdinal(today.getDate()) + " day";
         case'fullDate':
-            return today.toLocaleString('default', { month: 'long' })+' '+today.getDate()+', '+today.getFullYear()+', '+today.getHours()+':'+today.getMinutes();
+            return today.toLocaleString('default', {month: 'long'}) + ' ' + today.getDate() + ', '
+                + today.getFullYear() + ', ' + today.getHours() + ':' + today.getMinutes();
         default:
             return "No dates for you today ;)"
     }
@@ -191,7 +193,7 @@ function fixDateFormat(number) {
     return '0' + number;
 }
 
-function newDataOrdinal(ordinalData){
+function newDataOrdinal(ordinalData) {
     if (ordinalData > 3 && ordinalData < 21) {
         return 'th';
     }
@@ -210,7 +212,7 @@ function newDataOrdinal(ordinalData){
     }
 }
 
-function ordinateObjectsByCharactersNumbers(){
+function ordinateObjectsByCharactersNumbers() {
     const mounts = {
         0: 'January', 1: 'February', 2: 'March', 3: 'April', 4: 'May',
         5: 'June', 6: 'July', 7: 'August', 8: 'September', 9: 'October', 10:
@@ -230,6 +232,7 @@ function ordinateObjectsByCharactersNumbers(){
 
     console.log(result);
 }
+
 function first() {
     const name = 'First function';
     const firstArray = ['January', 'February'];
@@ -309,7 +312,7 @@ async function asyncFunction() {
 }
 
 function displayTheJson() {
-    const obj = { name: "John", age: 30, city: "New York" };
+    const obj = {name: "John", age: 30, city: "New York"};
     const myJSON = JSON.stringify(obj);
 
     console.log(myJSON);
@@ -317,8 +320,19 @@ function displayTheJson() {
 }
 
 function displayDataType() {
-    console.log(typeof 96);
-    console.log(typeof "This is");
+    const number = 96;
+    const string = 'Ola';
+    const boolean = true;
+    const nullData = null;
+    const object = {name: "JS"}
+    let undifinedData;
+
+    console.log("number", number);
+    console.log("string", string);
+    console.log("boolean", boolean);
+    console.log("null", nullData);
+    console.log("Object", object);
+    console.log("undifined", undifinedData);
 }
 
 function generatePromise() {
@@ -358,7 +372,7 @@ function convertStringToObject() {
     let obj = '{"name":"John", "age":30, "city":"New York"}';
     const result = JSON.parse(obj);
 
-    console.log("Name: "+result.name+"\nAge: " +result.age+ "\nCity: " +result.city);
+    console.log("Name: " + result.name + "\nAge: " + result.age + "\nCity: " + result.city);
 }
 
 function makeACall2() {
