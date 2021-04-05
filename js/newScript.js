@@ -180,9 +180,7 @@ function getDateFormat(format) {
             return today.toLocaleString('default', { month: 'long' })+' '+today.getDate()+', '+today.getFullYear()+', '+today.getHours()+':'+today.getMinutes();
         default:
             return "No dates for you today ;)"
-
     }
-
 }
 
 function fixDateFormat(number) {
