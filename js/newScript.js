@@ -310,3 +310,42 @@ async function asyncFunction() {
     console.log(result);
 
 }
+
+function displayDataType() {
+    console.log(typeof 96);
+    console.log(typeof "This is");
+
+}
+
+function generatePromise() {
+    return new Promise(resolve => {
+        setTimeout(resolve, 250);
+    });
+}
+
+function generateSecondPromise() {
+    return new Promise(resolve => {
+        setTimeout(resolve, 500);
+    });
+}
+
+function generateThirdPromise() {
+    return new Promise(resolve => {
+        setTimeout(resolve, 650);
+    });
+}
+
+async function makeACall() {
+    await generatePromise();
+    console.log('after 250');
+    await generateSecondPromise();
+    console.log('after 500');
+    await generateThirdPromise();
+    console.log('after 650');
+}
+
+window.onload = () => {
+    console.log('before');
+    makeACall()
+    console.log('after');
+}
