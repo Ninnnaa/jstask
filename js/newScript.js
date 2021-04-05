@@ -321,7 +321,6 @@ function displayTheJson() {
 function displayDataType() {
     console.log(typeof 96);
     console.log(typeof "This is");
-
 }
 
 function generatePromise() {
@@ -364,3 +363,16 @@ function convertStringToObject() {
     console.log("Name: "+result.name+"\nAge: " +result.age+ "\nCity: " +result.city);
 }
 
+function makeACall2() {
+    console.log('before');
+    generatePromise().then(value => {
+        console.log('after250');
+    });
+    generateSecondPromise().then(value => {
+        console.log('after 500');
+    });
+    generateThirdPromise().then(value => {
+        console.log('after 650');
+    });
+    console.log('after');
+}
