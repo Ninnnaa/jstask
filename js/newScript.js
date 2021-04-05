@@ -180,9 +180,7 @@ function getDateFormat(format) {
             return today.toLocaleString('default', { month: 'long' })+' '+today.getDate()+', '+today.getFullYear()+', '+today.getHours()+':'+today.getMinutes();
         default:
             return "No dates for you today ;)"
-
     }
-
 }
 
 function fixDateFormat(number) {
@@ -321,7 +319,6 @@ function displayTheJson() {
 function displayDataType() {
     console.log(typeof 96);
     console.log(typeof "This is");
-
 }
 
 function generatePromise() {
@@ -362,4 +359,18 @@ function convertStringToObject() {
     const result = JSON.parse(obj);
 
     console.log("Name: "+result.name+"\nAge: " +result.age+ "\nCity: " +result.city);
+}
+
+function makeACall2() {
+    console.log('before');
+    generatePromise().then(value => {
+        console.log('after250');
+    });
+    generateSecondPromise().then(value => {
+        console.log('after 500');
+    });
+    generateThirdPromise().then(value => {
+        console.log('after 650');
+    });
+    console.log('after');
 }
