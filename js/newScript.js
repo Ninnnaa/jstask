@@ -356,3 +356,11 @@ window.onload = () => {
     makeACall()
     console.log('after');
 }
+
+function convertStringToObject() {
+    let obj = '{"name":"John", "age":30, "city":"New York"}';
+    const result = JSON.parse(obj);
+
+    console.log("Name: "+result.name+"\nAge: " +result.age+ "\nCity: " +result.city);
+}
+
